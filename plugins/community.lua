@@ -18,12 +18,12 @@ return {
     opts = {
       suggestion = {
         keymap = {
-          accept = "<S-l>",
+          accept = "<A-l>",
           accept_word = false,
           accept_line = false,
-          next = "<S-.>",
-          prev = "<S-,>",
-          dismiss = "<S/>",
+          next = "<A-.>",
+          prev = "<A-,>",
+          dismiss = "<A/>",
         },
       },
     },
