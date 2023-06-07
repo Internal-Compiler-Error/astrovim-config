@@ -7,9 +7,27 @@ return {
   { import = "astrocommunity.pack.rust" },
 
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.nightfox" },
-  { import = "astrocommunity.colorscheme.kanagawa" },
   { import = "astrocommunity.colorscheme.rose-pine" },
+
+  {
+    "catppuccin",
+    opts = {
+      integrations = {
+        sandwich = false,
+        noice = true,
+        mini = true,
+        leap = true,
+        markdown = true,
+        neotest = true,
+        cmp = true,
+        overseer = true,
+        lsp_trouble = true,
+        ts_rainbow2 = true,
+        ts_rainbow = true,
+      },
+    },
+  },
+
 
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.copilot-lua" },

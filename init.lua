@@ -83,5 +83,10 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    local opts = { noremap = true, silent = true }
+    local map = vim.api.nvim_set_keymap
+    local set = vim.opt
+
+    map("n", "<leader><leader>", "<C-^>", opts)
   end,
 }
