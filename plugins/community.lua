@@ -29,23 +29,23 @@ return {
   },
 
 
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.completion.copilot-lua" },
-  { -- further customize the options set by the community
-    "copilot.lua",
-    opts = {
-      suggestion = {
-        keymap = {
-          accept = "<A-l>",
-          accept_word = false,
-          accept_line = false,
-          next = "<A-.>",
-          prev = "<A-,>",
-          dismiss = "<A/>",
-        },
-      },
-    },
-  },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  -- { -- further customize the options set by the community
+  --   "copilot.lua",
+  --   opts = {
+  --     suggestion = {
+  --       keymap = {
+  --         accept = "<A-l>",
+  --         accept_word = false,
+  --         accept_line = false,
+  --         next = "<A-.>",
+  --         prev = "<A-,>",
+  --         dismiss = "<A/>",
+  --       },
+  --     },
+  --   },
+  -- },
 
   { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
   {

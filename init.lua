@@ -36,9 +36,7 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          "js",
           "javascript",
-          "JavaScript",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -85,7 +83,7 @@ return {
     -- }
     local opts = { noremap = true, silent = true }
     local map = vim.api.nvim_set_keymap
-    local set = vim.opt
+    vim.opt.wrap = true
 
     map("n", "<leader><leader>", "<C-^>", opts)
   end,
