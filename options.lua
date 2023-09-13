@@ -7,7 +7,7 @@ return {
     spell = true, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = true, -- sets vim.opt.wrap
-    colorcolumn = "80,120", -- sets vim.opt.colorcolumn
+    -- colorcolumn = "80,120", -- sets vim.opt.colorcolumn
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
