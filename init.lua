@@ -69,30 +69,18 @@ return {
     -- augroups/autocommands and custom filetypes also this just pure lua so
     -- anything that doesn't fit in the normal config locations above can go here
     polish = function()
-        -- Set up custom filetypes
-        -- vim.filetype.add {
-        --   extension = {
-        --     foo = "fooscript",
-        --   },
-        --   filename = {
-        --     ["Foofile"] = "fooscript",
-        --   },
-        --   pattern = {
-        --     ["~/%.config/foo/.*"] = "fooscript",
-        --   },
-        -- }
-        local opts = {noremap = true, silent = true}
-        local map = vim.api.nvim_set_keymap
-        local autocmd = vim.api.nvim_create_autocmd;
+        local autocmd = vim.api.nvim_create_autocmd
+        local autogrp = vim.api.nvim_create_augroup
+
+        local ruler = autogrp("ruler", {})
 
         -- 80 column width for markdown files
-        autocmd({"BufEnter"}, {
-            pattern = {"*.md"},
-            command = "set textwidth=80 | set colorcolumn=81"
-        })
-
-        vim.opt.wrap = true
-
-        map("n", "<leader><leader>", "<C-^>", opts)
+        autocmd('BufEnter', {
+            pattern = '*.md',
+            group = ruler,
+            callback = function(args)
+                vim.api.nvim_buf_set_option(args.buf, "textwidth", 80)
+            end
+        });
     end
 }
